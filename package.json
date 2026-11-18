@@ -1,0 +1,28 @@
+{
+  "name": "gbn-site",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && vite build --ssr src/entry-server.tsx --outDir .ssr && node scripts/prerender.mjs",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "lucide-react": "0.454.0",
+    "motion": "^12.29.2",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.27",
+    "postcss": "^8.5.18",
+    "tailwindcss": "^3.4.19",
+    "typescript": "^5.7.2",
+    "vite": "^6.4.5"
+  }
+}

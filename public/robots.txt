@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gbntr.com/sitemap.xml
