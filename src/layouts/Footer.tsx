@@ -85,22 +85,6 @@ export default function Footer() {
                 </a>
               ))}
             </div>
-            <a
-              href={social.inovakademi}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-8 inline-flex flex-col gap-2 text-xs text-secondary-foreground/60 transition-opacity hover:opacity-80"
-            >
-              Bir İnovakademi girişimidir.
-              <img
-                src={asset('images/inovakademi-white.png')}
-                alt="İnovakademi"
-                width={900}
-                height={191}
-                loading="lazy"
-                className="h-6 w-auto opacity-80"
-              />
-            </a>
           </div>
 
           {linkGroups.map((group) => (

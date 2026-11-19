@@ -118,81 +118,79 @@ export const home = {
 export const social = {
   linkedin: 'https://www.linkedin.com/company/inovakademiltd/',
   instagram: 'https://www.instagram.com/inovakademi/',
-  inovakademi: 'https://inovakademi.com/',
 } as const;
 
 export const about = {
   hero: {
     badge: 'Hakkımızda',
-    titleLine: 'Bağlantılar paylaşıldıkça',
-    titleAccent: 'iş büyür.',
+    titleLine: 'Güçlerimizi birleştiriyor,',
+    titleAccent: 'birlikte büyüyoruz.',
     subtitle:
-      "GBN, KOBİ sahiplerini ve girişimcileri güvene dayalı bir iş ağında buluşturmak için kuruldu. Arkasında İnovakademi'nin 34 yılı aşkın eğitim, danışmanlık ve networking deneyimi var.",
+      'Güç Birliği Networking (GBN), KOBİ sahiplerini ve girişimcileri güvene dayalı bir iş ağında buluşturur. Üyelerimiz kontaklarını ve bağlantılarını birbirine açarak yeni iş fırsatlarına ulaşır.',
   },
   story: {
-    kicker: 'Hikâyemiz',
-    title: 'Tek seferlik tanışmaları kalıcı bir iş ağına dönüştürdük',
+    kicker: 'Biz kimiz?',
+    title: '34 yıllık networking deneyimiyle kurulan bir iş ağı',
     paragraphs: [
-      "İnovakademi, Türkiye'nin dört bir yanında oda, borsa ve organize sanayi bölgeleriyle birlikte Dış Ticaret Networking etkinlikleri düzenliyor. Bu buluşmalar bir gerçeği defalarca gösterdi: Doğru kişiyle tanışan bir işletme, aylarca aradığı bağlantıya bir anda ulaşabiliyor.",
-      'GBN, bu tanışmaları düzenli ve güvene dayalı bir iş ağına dönüştürmek için doğdu. Her sektörden yalnızca bir üyenin yer aldığı bu yapıda üyeler birbirinin rakibi değil, iş ortağıdır. Kontaklarını ve bağlantılarını birbirine açar, birlikte büyürler.',
+      'GBN, 34 yıllık networking deneyimi üzerine kurulmuş, Türkiye merkezli bir iş ağıdır. KOBİ sahiplerini ve girişimcileri düzenli olarak bir araya getirir, aralarında kurulan bağlantıların somut işe dönüşmesini sağlar.',
+      'Sistemimizde her sektörden yalnızca bir üye yer alır. Bu sayede üyeler arasında rekabet oluşmaz. Üyeler kontaklarını birbirine açar, ihtiyaç duydukları kişiye diğer üyelerin ağı üzerinden ulaşır ve birbirlerine iş yönlendirir.',
     ],
   },
   stats: [
-    { id: 'stat-years', value: '34+', label: 'yıllık eğitim ve danışmanlık deneyimi' },
-    { id: 'stat-participants', value: '40.000+', label: 'eğitim katılımcısı' },
-    { id: 'stat-companies', value: 'Yüzlerce', label: 'şirket ve STK\'ya danışmanlık' },
-    { id: 'stat-cities', value: '6 il', label: 'Dış Ticaret Networking buluşmaları' },
+    { id: 'stat-years', value: '34 yıl', label: 'networking deneyimi' },
+    { id: 'stat-sector', value: '1 üye', label: 'her sektörden' },
+    { id: 'stat-monthly', value: 'Her ay', label: 'networking buluşması' },
+    { id: 'stat-reference', value: 'Referansla', label: 'üyelik' },
   ],
   vision: {
     title: 'Vizyonumuz',
-    text: 'KOBİ\'lerin ve girişimcilerin güvenle bağlandığı, paylaşarak büyüdüğü Türkiye\'nin en güçlü iş ağı olmak.',
+    text: "KOBİ sahiplerinin ve girişimcilerin güvenle iş birliği yaptığı, Türkiye'nin önde gelen iş ağı olmak.",
   },
   mission: {
     title: 'Misyonumuz',
-    text: 'Üyelerin kontaklarını ve bağlantılarını birbirine açtığı; güvene dayalı, referans odaklı ve somut işe dönüşen bir networking sistemi kurmak ve bu sistemi sürekli geliştirmek.',
+    text: 'Üyelerimizin kontaklarını ve bağlantılarını birbirine açtığı, güvene ve referansa dayalı bir networking sistemi kurmak ve bu sistemde kurulan her bağlantının somut işe dönüşmesini sağlamak.',
   },
   values: {
     title: 'Değerlerimiz',
-    subtitle: 'GBN\'yi sıradan bir networking grubundan ayıran dört ilke:',
+    subtitle: 'Çalışma biçimimizi dört temel ilke belirler.',
     items: [
       {
         id: 'value-trust',
         title: 'Güven',
         description:
-          'Her üye ağa referansla katılır. Şeffaflık ve sorumlulukla hareket ederiz.',
+          'Ağımıza her üye referansla katılır. Üyelik başvuruları tek tek değerlendirilir ve üye sayısı kontrollü olarak artar.',
       },
       {
         id: 'value-cooperation',
-        title: 'Rekabet değil, iş birliği',
+        title: 'İş birliği',
         description:
-          'Her sektörden yalnızca bir üye kabul ederiz. Üyeler birbirinin rakibi değil, çözüm ortağıdır.',
+          'Her sektörden yalnızca bir üye kabul ederiz. Böylece üyeler birbirinin çözüm ortağı olur.',
       },
       {
         id: 'value-sharing',
         title: 'Paylaşım',
         description:
-          'Kontaklarımızı ve bağlantılarımızı birbirimize açarız. Paylaştıkça hepimizin iş kapasitesi artar.',
+          'Üyelerimiz kontaklarını ve bağlantılarını birbirine açar. Bağlantılar paylaşıldıkça tüm üyelerin iş kapasitesi artar.',
       },
       {
         id: 'value-results',
         title: 'Somut sonuç',
         description:
-          'Tanışmaları kartvizit alışverişinde bırakmayız; her bağlantının somut işe dönüşmesi için çalışırız.',
+          'Güvene dayalı ve referans odaklı yönlendirmelerin somut işe dönüşmesini hedefleriz. Her üye hem referans sağlar hem de aradığı kontağa ulaşır.',
       },
     ],
   },
-  inovakademi: {
-    kicker: 'Bir İnovakademi girişimi',
-    title: 'Deneyimli bir ekibin güvencesiyle',
-    text: 'İnovakademi; 34 yılı aşkın deneyime sahip yönetim ekibi, eğitmen ve danışman kadrosuyla bugüne kadar 40.000\'i aşkın katılımcıya eğitim vermiş, yüzlerce şirket ve STK\'ya danışmanlık yapmıştır. Eğitim, danışmanlık, UR-GE, analiz ve raporlama, Dış Ticaret Networking ve sürdürülebilirlik alanlarında KOBİ\'lerin kurumsal gelişimine destek olur.',
-    citiesLabel: 'Dış Ticaret Networking buluşmalarının düzenlendiği iller',
-    cities: ['Ankara', 'Adana', 'Antalya', 'Trabzon', 'Sakarya', 'Gaziantep'],
-    cta: 'inovakademi.com',
+  meetings: {
+    kicker: 'Buluşmalar',
+    title: 'Her ay yüz yüze',
+    text: 'Üyelerimiz her ay düzenlenen networking buluşmalarında bir araya gelir. Buluşmalar tanışma toplantısıyla başlar, spesifik taleplerle devam eder ve konuk konuşmacı sunumuyla sona erer. Panel görüşmeleri de üyelerin yüz yüze bağlantı kurmasına imkân tanır.',
+    sectorsLabel: 'Ağımızda yer alan sektörlerden bazıları',
+    sectors: ['Üretim', 'Yazılım', 'Lojistik', 'Finans'],
+    cta: 'Yaklaşan Etkinlik',
   },
   cta: {
     title: 'Bir sonraki buluşmada tanışalım',
-    description:
-      'GBN\'yi en iyi anlatan şey, bir buluşmaya katılmaktır. Yaklaşan etkinliğe göz at, ağın nasıl çalıştığını yakından gör.',
+    description: 'Yaklaşan etkinliğin ayrıntılarını Etkinlikler sayfasında bulabilirsiniz.',
     eventsLabel: 'Etkinlikleri Gör',
     membershipLabel: 'Üye Ol',
   },

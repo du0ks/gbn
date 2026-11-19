@@ -2,7 +2,7 @@ import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import { CornerAccent, Reveal } from '@/components/decor';
 import MembershipButton from '@/components/MembershipButton';
 import PageHero from '@/components/PageHero';
-import { about, social } from '@/content';
+import { about } from '@/content';
 import { asset, link } from '@/lib/paths';
 
 export default function AboutPage() {
@@ -40,7 +40,7 @@ export default function AboutPage() {
                   />
                   <img
                     src={asset('images/community.webp')}
-                    alt="GBN üyeleri bir iş görüşmesinde el sıkışıyor"
+                    alt="İş insanları bir toplantıda el sıkışıyor"
                     width={1500}
                     height={1001}
                     loading="lazy"
@@ -117,7 +117,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* İNOVAKADEMİ */}
+      {/* BULUŞMALAR */}
       <section className="relative overflow-hidden bg-secondary py-xxl text-secondary-foreground">
         <svg
           className="pointer-events-none absolute -right-10 top-0 h-full w-2/3 opacity-15"
@@ -145,42 +145,32 @@ export default function AboutPage() {
             <Reveal className="md:col-span-5">
               <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-primary">
                 <span className="h-2 w-2 bg-primary" aria-hidden="true" />
-                {about.inovakademi.kicker}
+                {about.meetings.kicker}
               </p>
-              <img
-                src={asset('images/inovakademi-white.png')}
-                alt="İnovakademi"
-                width={900}
-                height={191}
-                loading="lazy"
-                className="mt-8 h-auto w-full max-w-xs"
-              />
-              <h2 className="mt-8 font-heading text-3xl font-bold tracking-tight sm:text-4xl">
-                {about.inovakademi.title}
+              <h2 className="mt-6 font-heading text-4xl font-bold tracking-tight sm:text-5xl">
+                {about.meetings.title}
               </h2>
             </Reveal>
             <Reveal delay={0.1} className="md:col-span-7">
-              <p className="text-lg leading-relaxed text-secondary-foreground/80">{about.inovakademi.text}</p>
+              <p className="text-lg leading-relaxed text-secondary-foreground/80">{about.meetings.text}</p>
               <p className="mt-8 text-xs font-semibold uppercase tracking-widest text-secondary-foreground/60">
-                {about.inovakademi.citiesLabel}
+                {about.meetings.sectorsLabel}
               </p>
               <ul className="mt-3 flex flex-wrap gap-2">
-                {about.inovakademi.cities.map((city) => (
+                {about.meetings.sectors.map((sector) => (
                   <li
-                    key={city}
+                    key={sector}
                     className="border border-secondary-foreground/20 px-3 py-1.5 text-sm text-secondary-foreground/85"
                   >
-                    {city}
+                    {sector}
                   </li>
                 ))}
               </ul>
               <a
-                href={social.inovakademi}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={link('/etkinlikler')}
                 className="group mt-8 inline-flex items-center gap-2 border-2 border-white/40 px-6 py-2.5 text-sm font-semibold text-white transition-colors duration-150 hover:border-primary hover:bg-primary"
               >
-                {about.inovakademi.cta}
+                {about.meetings.cta}
                 <ArrowUpRight
                   size={16}
                   className="transition-transform duration-150 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"

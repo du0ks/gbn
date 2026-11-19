@@ -30,7 +30,7 @@ export const pages: PageRoute[] = [
     Component: AboutPage,
     title: `Hakkımızda — ${SUFFIX}`,
     description:
-      "GBN, KOBİ sahiplerini ve girişimcileri güvene dayalı bir iş ağında buluşturan bir İnovakademi girişimidir. Hikâyemiz, vizyonumuz ve değerlerimiz.",
+      '34 yıllık networking deneyimiyle kurulan GBN, KOBİ sahiplerini ve girişimcileri güvene dayalı bir iş ağında buluşturur. Vizyonumuz, misyonumuz ve değerlerimiz.',
   },
   {
     key: 'events',
@@ -38,7 +38,7 @@ export const pages: PageRoute[] = [
     Component: EventsPage,
     title: `Etkinlikler — ${SUFFIX}`,
     description:
-      'GBN Aylık Networking Buluşması 21 Aralık 2026’da. Tanışma toplantısı, spesifik talepler ve konuk konuşmacı sunumu.',
+      "GBN Aylık Networking Buluşması 21 Aralık 2026'da. Tanışma toplantısı, spesifik talepler ve konuk konuşmacı sunumu.",
   },
 ];
 
