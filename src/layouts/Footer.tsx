@@ -17,6 +17,16 @@ const linkGroups = [
   },
 ];
 
+const company = {
+  name: 'İnovakademi Eğitim ve Dan. Hiz. Ltd. Şti.',
+  address:
+    'Cevizli Mahallesi Mustafa Kemal Caddesi Hukukçular Towers A Blok No: 66 A Kat: 18 D.No: 111 Kartal / İstanbul',
+  tel: '+90 (216) 709 73 32',
+  telHref: 'tel:+902167097332',
+  fax: '0850 522 34 03',
+  email: 'info@gbntr.com',
+};
+
 const socials = [
   { href: social.linkedin, label: 'LinkedIn', Icon: Linkedin },
   { href: social.instagram, label: 'Instagram', Icon: Instagram },
@@ -120,7 +130,33 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="mt-14 flex flex-col items-start justify-between gap-3 border-t border-secondary-foreground/10 pt-6 sm:flex-row sm:items-center">
+        <div className="mt-14 border-t border-secondary-foreground/10 pt-8">
+          <h3 className="text-sm font-bold uppercase tracking-widest text-primary">
+            {company.name}
+          </h3>
+          <dl className="mt-4 grid grid-cols-1 gap-4 text-sm sm:grid-cols-2 lg:grid-cols-4">
+            <div className="lg:col-span-2">
+              <dt className="text-xs uppercase tracking-wider text-secondary-foreground/50">Adres</dt>
+              <dd className="mt-1 leading-relaxed text-secondary-foreground/80">{company.address}</dd>
+            </div>
+            <div>
+              <dt className="text-xs uppercase tracking-wider text-secondary-foreground/50">Telefon</dt>
+              <dd className="mt-1">
+                <a href={company.telHref} className={linkClass}>{company.tel}</a>
+              </dd>
+              <dt className="mt-3 text-xs uppercase tracking-wider text-secondary-foreground/50">Faks</dt>
+              <dd className="mt-1 text-secondary-foreground/80">{company.fax}</dd>
+            </div>
+            <div>
+              <dt className="text-xs uppercase tracking-wider text-secondary-foreground/50">E-posta</dt>
+              <dd className="mt-1">
+                <a href={'mailto:' + company.email} className={linkClass}>{company.email}</a>
+              </dd>
+            </div>
+          </dl>
+        </div>
+
+        <div className="mt-10 flex flex-col items-start justify-between gap-3 border-t border-secondary-foreground/10 pt-6 sm:flex-row sm:items-center">
           <p className="text-xs text-secondary-foreground/60" suppressHydrationWarning>
             © {currentYear} Güç Birliği Networking (GBN). Tüm hakları saklıdır.
           </p>
