@@ -111,7 +111,7 @@ export const home = {
     description:
       'GBN üyeliği başvuru üzerine kuruludur. Her başvuru değerlendirilir; ağın güven dengesini korumak için üye sayısı kontrollü büyür.',
     primaryCta: { label: 'Başvuru Formu', href: '/uyelik' },
-    secondaryCta: { label: 'Sorularını Sor', href: '/iletisim' },
+    secondaryCta: { label: 'Sorularını Sor', href: '#iletisim' },
   },
 } as const;
 

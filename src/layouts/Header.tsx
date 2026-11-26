@@ -7,7 +7,7 @@ const navItems = [
   { href: '/', label: 'Ana Sayfa' },
   { href: '/hakkimizda', label: 'Hakkımızda' },
   { href: '/etkinlikler', label: 'Etkinlikler' },
-  { href: '/iletisim', label: 'İletişim' },
+  { href: '#iletisim', label: 'İletişim' },
 ];
 
 /**
@@ -40,9 +40,9 @@ export default function Header({ pathname }: { pathname: string }) {
             <img
               src={asset('images/logo.webp')}
               alt="Güç Birliği Networking — GBN"
-              width={601}
-              height={248}
-              className="block h-auto max-h-10 md:max-h-14 w-auto max-w-full object-contain"
+              width={509}
+              height={200}
+              className="block h-auto max-h-11 md:max-h-16 w-auto max-w-full object-contain"
             />
           </a>
 

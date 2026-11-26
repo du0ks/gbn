@@ -1,21 +1,7 @@
-import { Linkedin, Instagram, ArrowUpRight } from 'lucide-react';
+import { Linkedin, Instagram, MapPin, Phone, Printer, Mail } from 'lucide-react';
 import MembershipButton from '@/components/MembershipButton';
 import { asset, link } from '@/lib/paths';
 import { social } from '@/content';
-
-const linkGroups = [
-  {
-    title: 'GBN',
-    links: [
-      { href: '/hakkimizda', label: 'Hakkımızda' },
-      { href: '/etkinlikler', label: 'Etkinlikler' },
-    ],
-  },
-  {
-    title: 'İletişim',
-    links: [{ href: '/iletisim', label: 'Bize Ulaşın' }],
-  },
-];
 
 const company = {
   name: 'İnovakademi Eğitim ve Dan. Hiz. Ltd. Şti.',
@@ -24,64 +10,43 @@ const company = {
   tel: '+90 (216) 709 73 32',
   telHref: 'tel:+902167097332',
   fax: '0850 522 34 03',
-  email: 'info@gbntr.com',
+  email: 'gbn@inovakademi.com',
 };
+
+const pages = [
+  { href: '/hakkimizda', label: 'Hakkımızda' },
+  { href: '/etkinlikler', label: 'Etkinlikler' },
+  { href: '#iletisim', label: 'İletişim' },
+];
 
 const socials = [
   { href: social.linkedin, label: 'LinkedIn', Icon: Linkedin },
   { href: social.instagram, label: 'Instagram', Icon: Instagram },
 ];
 
-const linkClass =
-  'group inline-flex items-center gap-1 text-sm text-secondary-foreground/80 transition-colors duration-150 hover:text-primary-foreground';
+const headingClass = 'text-sm font-semibold text-foreground';
+const linkClass = 'text-sm text-muted-foreground transition-colors duration-150 hover:text-primary';
 
-/**
- * GBN footer — koyu antrasit blok ve kırmızı bağlantı motifi.
- */
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative bg-secondary text-secondary-foreground overflow-hidden">
-      <svg
-        className="pointer-events-none absolute right-0 top-0 h-full w-1/2 opacity-20"
-        viewBox="0 0 600 400"
-        fill="none"
-        aria-hidden="true"
-      >
-        <g stroke="hsl(var(--primary))" strokeWidth="1.5">
-          <line x1="80" y1="60" x2="240" y2="160" />
-          <line x1="240" y1="160" x2="180" y2="330" />
-          <line x1="240" y1="160" x2="430" y2="90" />
-          <line x1="430" y1="90" x2="540" y2="250" />
-          <line x1="240" y1="160" x2="540" y2="250" />
-          <line x1="80" y1="60" x2="430" y2="90" />
-        </g>
-        <g fill="hsl(var(--primary))">
-          <circle cx="80" cy="60" r="6" />
-          <circle cx="240" cy="160" r="8" />
-          <circle cx="180" cy="330" r="5" />
-          <circle cx="430" cy="90" r="6" />
-          <circle cx="540" cy="250" r="7" />
-        </g>
-      </svg>
-
-      <div className="relative mx-auto max-w-content px-4 sm:px-6 pt-16 pb-8">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-12">
-          <div className="md:col-span-6">
+    <footer className="border-t border-border bg-muted/40">
+      <div className="mx-auto max-w-content px-4 sm:px-6 py-12">
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-12">
+          <div className="lg:col-span-4">
             <img
-              src={asset('images/logo-dark.webp')}
+              src={asset('images/logo.webp')}
               alt="Güç Birliği Networking — GBN"
-              width={601}
-              height={248}
-              className="block h-auto max-h-12 w-auto max-w-full object-contain"
+              width={509}
+              height={200}
+              className="block h-16 w-auto"
               loading="lazy"
             />
-            <p className="mt-5 max-w-sm text-sm leading-relaxed text-secondary-foreground/70">
-              Kontaklarını aç, bağlantın güçlensin. Türkiye'nin networkü: KOBİ sahipleri ve
-              girişimciler için kurulan iş ağı.
+            <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
+              KOBİ sahipleri ve girişimciler için kurulan iş ağı.
             </p>
-            <div className="mt-6 flex items-center gap-3">
+            <div className="mt-5 flex items-center gap-2">
               {socials.map(({ href, label, Icon }) => (
                 <a
                   key={label}
@@ -89,78 +54,62 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="inline-flex h-10 w-10 items-center justify-center border border-secondary-foreground/20 text-secondary-foreground/70 transition-colors duration-150 hover:border-primary hover:text-primary"
+                  className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors duration-150 hover:border-primary hover:text-primary"
                 >
-                  <Icon size={18} />
+                  <Icon size={16} />
                 </a>
               ))}
             </div>
           </div>
 
-          {linkGroups.map((group) => (
-            <div key={group.title} className="md:col-span-3">
-              <h3 className="text-sm font-bold uppercase tracking-widest text-primary">
-                {group.title}
-              </h3>
-              <nav className="mt-4 flex flex-col gap-2.5" aria-label={group.title + ' bağlantıları'}>
-                {group.links.map((item) => (
-                  <a
-                    key={item.href}
-                    href={link(item.href)}
-                    className={linkClass}
-                  >
+          <nav className="lg:col-span-2" aria-label="Alt menü">
+            <h3 className={headingClass}>Sayfalar</h3>
+            <ul className="mt-4 space-y-2.5">
+              {pages.map((item) => (
+                <li key={item.href}>
+                  <a href={link(item.href)} className={linkClass}>
                     {item.label}
-                    <ArrowUpRight
-                      size={14}
-                      className="opacity-0 transition-opacity duration-150 group-hover:opacity-100"
-                    />
                   </a>
-                ))}
-                {group.title === 'GBN' && (
-                  <MembershipButton className={linkClass + ' text-left'}>
-                    Üyelik
-                    <ArrowUpRight
-                      size={14}
-                      className="opacity-0 transition-opacity duration-150 group-hover:opacity-100"
-                    />
-                  </MembershipButton>
-                )}
-              </nav>
-            </div>
-          ))}
+                </li>
+              ))}
+              <li>
+                <MembershipButton className={linkClass + ' text-left'}>Üyelik</MembershipButton>
+              </li>
+            </ul>
+          </nav>
+
+          <div id="iletisim" className="scroll-mt-24 sm:col-span-2 lg:col-span-6">
+            <h3 className={headingClass}>İletişim</h3>
+            <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
+              <li className="flex gap-3">
+                <MapPin size={16} className="mt-0.5 shrink-0 text-primary" aria-hidden="true" />
+                <span className="leading-relaxed">{company.address}</span>
+              </li>
+              <li className="flex gap-3">
+                <Phone size={16} className="mt-0.5 shrink-0 text-primary" aria-hidden="true" />
+                <a href={company.telHref} className={linkClass}>
+                  {company.tel}
+                </a>
+              </li>
+              <li className="flex gap-3">
+                <Printer size={16} className="mt-0.5 shrink-0 text-primary" aria-hidden="true" />
+                <span>Faks: {company.fax}</span>
+              </li>
+              <li className="flex gap-3">
+                <Mail size={16} className="mt-0.5 shrink-0 text-primary" aria-hidden="true" />
+                <a href={'mailto:' + company.email} className={linkClass}>
+                  {company.email}
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <div className="mt-14 border-t border-secondary-foreground/10 pt-8">
-          <h3 className="text-sm font-bold uppercase tracking-widest text-primary">
-            {company.name}
-          </h3>
-          <dl className="mt-4 grid grid-cols-1 gap-4 text-sm sm:grid-cols-2 lg:grid-cols-4">
-            <div className="lg:col-span-2">
-              <dt className="text-xs uppercase tracking-wider text-secondary-foreground/50">Adres</dt>
-              <dd className="mt-1 leading-relaxed text-secondary-foreground/80">{company.address}</dd>
-            </div>
-            <div>
-              <dt className="text-xs uppercase tracking-wider text-secondary-foreground/50">Telefon</dt>
-              <dd className="mt-1">
-                <a href={company.telHref} className={linkClass}>{company.tel}</a>
-              </dd>
-              <dt className="mt-3 text-xs uppercase tracking-wider text-secondary-foreground/50">Faks</dt>
-              <dd className="mt-1 text-secondary-foreground/80">{company.fax}</dd>
-            </div>
-            <div>
-              <dt className="text-xs uppercase tracking-wider text-secondary-foreground/50">E-posta</dt>
-              <dd className="mt-1">
-                <a href={'mailto:' + company.email} className={linkClass}>{company.email}</a>
-              </dd>
-            </div>
-          </dl>
-        </div>
-
-        <div className="mt-10 flex flex-col items-start justify-between gap-3 border-t border-secondary-foreground/10 pt-6 sm:flex-row sm:items-center">
-          <p className="text-xs text-secondary-foreground/60" suppressHydrationWarning>
+        <div className="mt-10 flex flex-col gap-2 border-t border-border pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
+          <p suppressHydrationWarning>
             © {currentYear} Güç Birliği Networking (GBN). Tüm hakları saklıdır.
           </p>
-          <p className="text-xs text-secondary-foreground/60">Networkünü aç — işin büyüsün.</p>
+          <p>{company.name}</p>
         </div>
       </div>
     </footer>

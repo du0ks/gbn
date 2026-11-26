@@ -301,7 +301,7 @@ export default function HomePage() {
                     Üyelik şartları, etkinlikler veya iş ortaklığı hakkında sorularını yanıtlamaya hazırız.
                   </p>
                   <a
-                    href={link('/iletisim')}
+                    href={link('#iletisim')}
                     className="group mt-6 inline-flex w-fit items-center gap-2 border-2 border-secondary-foreground/30 px-6 py-3 text-sm font-semibold text-secondary-foreground transition-colors duration-150 hover:border-primary hover:text-primary"
                   >
                     {home.cta.secondaryCta.label}
